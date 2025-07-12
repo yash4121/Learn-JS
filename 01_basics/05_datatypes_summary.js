@@ -13,14 +13,33 @@ const bigNumber = 21234535653646767632443n
 
 // Array, Object, Functions
 
-const names = ["Ram", "Sham"]
-console.log(names[0]) //Ram
-const obj = {
-    "name": "Ram",
-    "age": 23
+// const names = ["Ram", "Sham"]
+// console.log(names[0]) //Ram
+// const obj = {
+//     "name": "Ram",
+//     "age": 23
+// }
+// console.log(obj["name"]) //Ram
+// const myfunc = function() {
+//     console.log("hi there")
+// }
+// myfunc() //hi there
+
+//************************************ */
+// Stack and Heap in JS
+// primitive datatype uses stack - gives copy
+let name = "Ram"
+let anotherName = name
+anotherName = "Aryan"
+console.log(name)
+console.log(anotherName)
+
+// non primitive datatype uses heap - gives reference
+let obj = {
+    email: "user@gmail.com",
+    age: 23
 }
-console.log(obj["name"]) //Ram
-const myfunc = function() {
-    console.log("hi there")
-}
-myfunc() //hi there
+let newObj = obj
+newObj.email = "user1@gmail.com"
+console.log(obj.email)
+console.log(newObj.email)
