@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hi</h1>
+    <button>Start</button>
+</body>
+<script>
+    const sayHi = function(){
+        document.querySelector('h1').innerHTML = "BYE"
+    }
+    const changeMe = setTimeout(sayHi,3000)
+    document.querySelector('button').addEventListener('click', function(){
+        clearInterval(changeMe)
+        console.log('ok')
+    })
+</script>
+</html>
